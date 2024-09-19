@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introductie variabelen & datatypes</title>
+
+    <script>
+        // Verschillende variabelen die gedefinieerd moeten worden
+        let begroetingValue = "Hoi"
+        let naamValue // Je naam
+        let geboorteJaar // Je geboortejaar (zonder maand/dag)
+        let hobbyValue // Iets wat je leuk vindt om te doen
+        
+        // Boolean om aan te geven of je wel/niet van gamen houdt
+        let houdtVanGamen
+        
+        // Array met je favoriete games 
+        let favorieteGames
+    </script>
+</head>
+<body>
+    <h1>Over mij</h1>
+    
+    <p>
+        <span id="begroeting"></span>!
+        <br>
+        Mijn naam is <span id="naam"></span>, ik ben ~<span id="leeftijd"></span> jaar oud en ik hou van <span id="hobby"></span>.</p>
+    <p id="gamen"></p> <!-- Leeg element waar de gamen-boodschap komt -->
+    <ul id="favorieteGames"></ul> <!-- Lege lijst voor favoriete games -->
+    
+    <script>
+        // Onderstaande kun je bekijken om te zien hoe het werkt, 
+        // maar deze oefening gaat om verschillende data types ontdekken,
+        // en die kun je hierboven invoeren
+
+
+        // Koppel de variabelen aan de HTML elementen
+        document.getElementById("begroeting").innerText = begroetingValue;
+        document.getElementById("naam").innerText = naamValue;
+        document.getElementById("leeftijd").innerText = 2024 - geboorteJaar;
+        document.getElementById("hobby").innerText = hobbyValue;
+        
+        
+        // Voeg favoriete games toe aan de lijst
+        const gamesList = document.getElementById("favorieteGames");
+        console.log(favorieteGames)
+        favorieteGames.forEach(function(game) {
+            const listItem = document.createElement("li");
+            listItem.innerText = game;
+            gamesList.appendChild(listItem);
+        });
+        if (!houdtVanGamen) {
+            document.getElementById("gamen").innerText = "Gamen is niet echt mijn ding, maar als het moet... Dan speel ik dit:";
+        } else {
+            document.getElementById("gamen").innerText = "Ook houd ik van gamen! Hier zijn een paar van mijn favoriete games:";
+        }
+    </script>
+</body>
+</html>
