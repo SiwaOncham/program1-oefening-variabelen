@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Types</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+    <script>
+        const alertName = function() {
+            const name = document.getElementById("name").value
+            window.alert( "Hoi " + name)
+        }
+    </script>
+</head>
+<body>
+
+    <p>
+        Open de console en experimenteer met het volgende commando: <strong><kbd>typeof</kbd></strong><br>
+        Dit commando toont het datatype van de waarde die je invoert. Zie ook de voorbeelden hieronder.
+        <pre>
+typeof "Hoi"
+typeof 1
+typeof []
+typeof {a:[]}
+        </pre>
+    </p>
+
+        <details>
+            <summary>String</summary>
+            <ul>
+                <li>'Hoi'</li>
+                <li>""</li>
+                <li>'1.2'</li>
+                <li>"5"</li>
+                <li>"{}"</li>
+                <li>'[]'</li>
+                <li>"function()"</li>
+                <li></li>
+                <li><strong>Eigenlijk alles dat tussen " " of ' ' tekens staat</strong></li>
+            </ul>
+        </details>
+        <details>
+            <summary>Number</summary>
+            <ul>
+                <li>0</li>
+                <li>1</li>
+                <li>2.2</li>
+                <li>NaN</li>
+                <li>-10</li>
+                <li>007</li>
+                <li></li>
+                <li><strong>NaN staat voor Not A Number, maar het datatype van NaN is dus wel een number</strong></li>
+            </ul>
+        </details>
+        <details>
+            <summary>Boolean</summary>
+            <ul>
+                <li>true</li>
+                <li>false</li>
+                <li></li>
+                <li><strong>Boolean kan alleen maar true of false zijn</strong></li>
+            </ul>
+        </details>
+        <details>
+            <summary>Null</summary>
+            <ul>
+                <li>null</li>
+                <li></li>
+                <li><strong>Null vertegenwoordigt expliciet een lege of niet-bestaande waarde</strong></li>
+            </ul>
+        </details>
+        <details>
+            <summary>Undefined</summary>
+            <ul>
+                <li>undefined</li>
+                <li></li>
+                <li><strong>Undefined betekent dat een variabele wel is gedeclareerd, maar geen waarde heeft gekregen</strong></li>
+            </ul>
+        </details>
+        <details>
+            <summary>Object</summary>
+            <ul>
+                <li>{}</li>
+                <li>{ naam: 'Jan', leeftijd: 30 }</li>
+                <li>{ href: '/index.html', target: '_blank' }</li>
+                <li>{ naam: "Object", method: function() {} }</li>
+                <li>new Date()</li>
+                <li></li>
+                <li><strong>Het JavaScript object datatype is het meest krachtige en daarmee complexe datatype, wat niet in een one-liner is toe te lichten. <a href="https://www.w3schools.com/JS//js_typeof.asp"></a>Check daarom deze link voor meer achtergrond informatie</a></strong></li>
+            </ul>
+        </details>
+        <details>
+            <summary>Array</summary>
+            <ul>
+                <li>[]</li>
+                <li>[1, 2, 3]</li>
+                <li>['a', 'b', 'c']</li>
+                <li>[{ naam: 'Jan' }, { naam: 'Piet' }]</li>
+                <li></li>
+                <li><strong>Een array is een lijst van waarden, het javascript datatype is een object.</strong></li>
+            </ul>
+        </details>
+        <details>
+            <summary>Function</summary>
+            <ul>
+                <li>function() {}</li>
+                <li>function som(a, b) { return a + b; }</li>
+                <li>const functie = () => {}</li>
+                <li></li>
+                <li><strong>Een functie is een blok code dat kan worden hergebruikt, het datatype is ook function</strong></li>
+            </ul>
+        </details>
+        <details>
+            <summary>Symbol</summary>
+            <ul>
+                <li>Symbol()</li>
+                <li>const sym = Symbol('beschrijving')</li>
+                <li></li>
+                <li><strong>Symbolen zijn unieke en onwijzigbare waarden, vaak gebruikt als unieke object-sleutels</strong></li>
+            </ul>
+        </details>
+        <details>
+            <summary>BigInt</summary>
+            <ul>
+                <li>BigInt(1234567890123456789012345678901234567890)</li>
+                <li>123n</li>
+                <li></li>
+                <li><strong>BigInt is een datatype voor hele grote getallen die niet passen in het Number datatype</strong></li>
+            </ul>
+        </details>
+</body>
+</html>
